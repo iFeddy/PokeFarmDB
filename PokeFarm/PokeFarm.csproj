@@ -51,6 +51,14 @@
   <ItemGroup>
     <Compile Include="Clases\Pokemon.cs" />
     <Compile Include="Clases\PokemonInfo.cs" />
+    <Compile Include="Clases\PokemonSpecies.cs" />
+    <Compile Include="Clases\PokemonSpeciesInfo.cs" />
+    <Compile Include="loadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loadingForm.Designer.cs">
+      <DependentUpon>loadingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PokeFarm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="loadingForm.resx">
+      <DependentUpon>loadingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PokeFarm.resx">
       <DependentUpon>PokeFarm.cs</DependentUpon>
     </EmbeddedResource>
@@ -70,6 +81,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -86,6 +98,12 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Recursos\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loadingGIF.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
